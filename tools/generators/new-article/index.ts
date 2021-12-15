@@ -1,10 +1,25 @@
-import { Tree, formatFiles, installPackagesTask } from '@nrwl/devkit';
-import { libraryGenerator } from '@nrwl/workspace/generators';
+import {
+  Tree,
+  formatFiles,
+  generateFiles,
+  joinPathFragments,
+  names,
+} from '@nrwl/devkit';
 
-export default async function (tree: Tree, schema: any) {
-  await libraryGenerator(tree, { name: schema.name });
+interface NewArticleSchemaOptions {
+  title: string;
+  author: string;
+  excerpt?: string;
+}
+
+export default async function (tree: Tree, schema: NewArticleSchemaOptions) {
+  generateFiles(tree, joinPathFragments(__dirname, './files'), './_articles', {
+    title: schema.title,
+    author: schema.author,
+    excerpt: schema.excerpt || '',
+    normalizedTitle: names(schema.title).fileName,
+    creationDate: new Date().toISOString(),
+  });
+
   await formatFiles(tree);
-  return () => {
-    installPackagesTask(tree);
-  };
 }
