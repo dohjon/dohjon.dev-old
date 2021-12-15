@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dohjon.github.io/markdown": ["libs/markdown/src/index.ts"]
+      "@dohjon.github.io/markdown": ["libs/markdown/src/index.ts"],
+      "@dohjon.github.io/shared/mdx-elements": [
+        "libs/shared/mdx-elements/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
