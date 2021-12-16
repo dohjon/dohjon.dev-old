@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import './about.module.css';
 
-import { TopicButton } from '@dohjon.github.io/shared/ui';
+import { TopicButton } from '@dohjon.dev/shared/ui';
 
 export interface AboutProps {
   name: string;

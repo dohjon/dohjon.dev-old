@@ -1,5 +1,5 @@
 {
-  "name": "dohjon.github.io",
+  "name": "dohjon.dev",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -7,7 +7,8 @@
     "build": "nx build",
     "test": "nx test",
     "dev:site": "TAILWIND_MODE=watch nx run site:serve",
-    "dev:site:storybook": "TAILWIND_MODE=watch nx run shared-ui:storybook"
+    "dev:site:storybook": "TAILWIND_MODE=watch nx run shared-ui:storybook",
+    "build:site": "nx build site --prod"
   },
   "private": true,
   "dependencies": {

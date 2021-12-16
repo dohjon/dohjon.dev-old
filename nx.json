@@ -1,5 +1,5 @@
 {
-  "npmScope": "dohjon.github.io",
+  "npmScope": "dohjon.dev",
   "affected": {
     "defaultBase": "main"
   },
@@ -14,7 +14,12 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
         "accessToken": "MDc5NGE2NWItYjQ2MC00ZDIwLTlmZWItM2FjNzI5NzgzNWYzfHJlYWQtd3JpdGU="
       }
     }
@@ -42,11 +47,15 @@
     },
     "site-e2e": {
       "tags": [],
-      "implicitDependencies": ["site"]
+      "implicitDependencies": [
+        "site"
+      ]
     },
     "storybook-e2e-ui-e2e": {
       "tags": [],
-      "implicitDependencies": ["shared-ui"]
+      "implicitDependencies": [
+        "shared-ui"
+      ]
     }
   }
 }

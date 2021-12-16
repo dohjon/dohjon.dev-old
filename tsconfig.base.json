@@ -15,14 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dohjon.github.io/markdown": ["libs/markdown/src/index.ts"],
-      "@dohjon.github.io/shared/mdx-elements": [
+      "@dohjon.dev/markdown": ["libs/markdown/src/index.ts"],
+      "@dohjon.dev/shared/mdx-elements": [
         "libs/shared/mdx-elements/src/index.ts"
       ],
-      "@dohjon.github.io/shared/mdx-elements/*": [
+      "@dohjon.dev/shared/mdx-elements/*": [
         "libs/shared/mdx-elements/src/lib/*"
       ],
-      "@dohjon.github.io/shared/ui": ["libs/shared/ui/src/index.ts"]
+      "@dohjon.dev/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

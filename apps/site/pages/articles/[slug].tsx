@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import {
   getParsedFileContentBySlug,
   renderMarkdown,
-} from '@dohjon.github.io/markdown';
+} from '@dohjon.dev/markdown';
 
 export interface ArticleProps extends ParsedUrlQuery {
   slug: string;
@@ -15,11 +15,10 @@ export interface ArticleProps extends ParsedUrlQuery {
 
 const mdxElements = {
   Youtube: dynamic(
-    () => import('@dohjon.github.io/shared/mdx-elements/youtube/youtube')
+    () => import('@dohjon.dev/shared/mdx-elements/youtube/youtube')
   ),
   a: dynamic(
-    () =>
-      import('@dohjon.github.io/shared/mdx-elements/custom-link/custom-link')
+    () => import('@dohjon.dev/shared/mdx-elements/custom-link/custom-link')
   ),
 };
 
