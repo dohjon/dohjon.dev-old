@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import * as matter from 'gray-matter';
+import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 
 interface MarkdownContent {
